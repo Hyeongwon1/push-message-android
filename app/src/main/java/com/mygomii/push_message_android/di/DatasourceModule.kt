@@ -5,5 +5,5 @@ import com.mygomii.push_message_android.data.datasources.TokenDatasourceImpl
 import org.koin.dsl.module
 
 val datasourceModule = module {
-    single<TokenDatasource> { TokenDatasourceImpl(service = get()) }
+    single<TokenDatasource> { TokenDatasourceImpl(client = get()) }
 }
