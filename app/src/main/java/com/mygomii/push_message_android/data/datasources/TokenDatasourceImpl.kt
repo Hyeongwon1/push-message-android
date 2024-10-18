@@ -1,5 +1,7 @@
 package com.mygomii.push_message_android.data.datasources
 
+import android.provider.Settings
+import com.mygomii.push_message_android.NotificationApp
 import com.mygomii.push_message_android.const.BASE_URL
 import com.mygomii.push_message_android.data.models.TokenReq
 import com.mygomii.push_message_android.data.models.TokenRes
@@ -21,5 +23,14 @@ class TokenDatasourceImpl(
                 }.body()
             )
         }
+    }
+}
+
+object DeviceUtils {
+    fun getDeviceId(): String {
+        return Settings.Secure.getString(
+            NotificationApp.app.contentResolver,
+            Settings.Secure.ANDROID_ID
+        )
     }
 }
