@@ -9,8 +9,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.mygomii.push_message_android.presentation.screens.home.HomeScreen
+import com.mygomii.push_message_android.presentation.screens.home.NotificationPermissionHandler
 import com.mygomii.push_message_android.presentation.ui.theme.PushmessageandroidTheme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
             PushmessageandroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Box(modifier = Modifier.padding(innerPadding)) {
-                        HomeScreen()
+                        NotificationPermissionHandler()
                     }
                 }
             }

@@ -25,7 +25,10 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -76,5 +79,6 @@ dependencies {
     implementation(libs.koin.android)
 
     implementation(libs.firebase.messaging)
+    implementation(libs.accompanist.permissions)
 
 }
